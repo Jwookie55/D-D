@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DnD Sheet Test</title>
+	<style>
+		* {margin: 0; padding: 0;}
+		.switcher {width: 5vw; position: fixed; top: 2.5vh; left: -4.5vw; z-index: 1000; display: flex; flex-direction: column; background: #543; transition: left 0.5s; padding: 5px 0; border-bottom: 5px solid #654; border-top: 5px solid #654; box-shadow: inset -7px 0 5px 3px #321; align-items: center;}
+		.switcher:focus, .switcher:hover {left: 0; outline: none;}
+		.switcher:before {content:'•'; position: absolute; width: 20px; border-radius: 0 5px 5px 0; left: 4.5vw; top: 50%; background: #765; text-align: center; transform: translateY(-50%); padding: 46% 0;}
+		.switcher A {text-decoration: none; color: #000;}
+		.switcher A:hover {background: rgba(255, 255, 255, 0.5);}
+		.contain {width: 100vw; height: 100vmax; background: #555; display: flex; justify-content: center; align-items: center;}
+		.sheet {width: 95vmax; height: 95vmax; background: #FFF; display: none; flex-wrap: wrap;}
+		.sheet:target {display: flex;}
+		.header {width: 100%; height: 15%;}
+		.mainColumn {width: 33.333333333%; height: 65%; display: flex; flex-direction: column;}
+		.mainColumnHalf {width: 100%; height: 50%;}
+		.spellColumn {width: 33.333333333%; height: 85%; display: flex; flex-direction: column;}
+		.cantrips {width: 100%; height: 24.86%;}
+		.first {width: 100%; height: 37.57%;}
+		.second {width: 100%; height: 37.57%;}
+		.third {width: 100%; height: 34.89%;}
+		.fourth {width: 100%; height: 33.87%;}
+		.fifth {width: 100%; height: 31.24%;}
+		.sixth {width: 100%; height: 26.57%;}
+		.seventh {width: 100%; height: 25.54%;}
+		.eighth {width: 100%; height: 21.21%;}
+		.ninth {width: 100%; height: 26.68%;}
+		.profEquipContain {width: 100%; height: 20%; display: flex;}
+		.profLang {width: 33.333333333%; height: 100%;}
+		.equip {width: 66.666666666%; height: 100%;}
+	</style>
+</head>
+<body>
+	<div class="switcher" tabindex="0">
+		<a href="#">New</a>
+		<a href="#main">Main</a>
+		<a href="#spells">Spells</a>
+		<a href="#">Save</a>
+		<a href="#">Roller</a>
+	</div>
+	<div class="contain">
+		<div class="sheet" id="main">
+			<div class="header" style="background: #F00;"></div>
+			<div class="mainColumn" style="background: #F80;"></div>
+			<div class="mainColumn">
+				<div class="mainColumnHalf" style="background: #FF0;"></div>
+				<div class="mainColumnHalf" style="background: #FF8;"></div>
+			</div>
+			<div class="mainColumn">
+				<div class="mainColumnHalf" style="background: #FFF;"></div>
+				<div class="mainColumnHalf" style="background: #0F0;"></div>
+			</div>
+			<div class="profEquipContain">
+				<div class="profLang" style="background: #0F8;"></div>
+				<div class="equip" style="background: #0FF;"></div>
+			</div>
+		</div>
+		<div class="sheet" id="spells">
+			<div class="header" style="background: #F00;"></div>
+			<div class="spellColumn">
+				<div class="cantrips" style="background: #F80;"></div>
+				<div class="first" style="background: #FF0;"></div>
+				<div class="second" style="background: #FF8;"></div>
+			</div>
+			<div class="spellColumn">
+				<div class="third" style="background: #FFF;"></div>
+				<div class="fourth" style="background: #0F0;"></div>
+				<div class="fifth" style="background: #0F8;"></div>
+			</div>
+			<div class="spellColumn">
+				<div class="sixth" style="background: #0FF;"></div>
+				<div class="seventh" style="background: #00F;"></div>
+				<div class="eighth" style="background: #80F;"></div>
+				<div class="ninth" style="background: #F0F;"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
