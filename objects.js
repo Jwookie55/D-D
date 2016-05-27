@@ -130,7 +130,8 @@ var races = {
 
 function raceCall(race, subrace){
 	var output = races[race];
-	var sub = races[race]["subraces"][subrace];
+	var sub; 
+	(subrace!=false)? sub=races[race]["subraces"][subrace] : sub=false;
 	output.subraces = sub;
 	console.log(output);
 }
