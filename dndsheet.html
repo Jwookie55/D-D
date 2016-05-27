@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>DnD Sheet Test</title>
 	<style>
-		* {margin: 0; padding: 0;}
+		* {margin: 0; padding: 0; box-sizing: border-box;}
 		.switcher {width: 5vw; position: fixed; top: 2.5vh; left: -4.5vw; z-index: 1000; display: flex; flex-direction: column; background: #543; transition: left 0.5s; padding: 5px 0; border-bottom: 5px solid #654; border-top: 5px solid #654; box-shadow: inset -7px 0 5px 3px #321; align-items: center;}
 		.switcher:focus, .switcher:hover {left: 0; outline: none;}
 		.switcher:before {content:'•'; position: absolute; width: 20px; border-radius: 0 5px 5px 0; left: 4.5vw; top: 50%; background: #765; text-align: center; transform: translateY(-50%); padding: 46% 0;}
@@ -13,7 +13,11 @@
 		.contain {width: 100vw; height: 100vmax; background: #555; display: flex; justify-content: center; align-items: center;}
 		.sheet {width: 95vmax; height: 95vmax; background: #FFF; display: none; flex-wrap: wrap;}
 		.sheet:target {display: flex;}
-		.header {width: 100%; height: 15%;}
+		.header {width: 100%; height: 14.25vmax; display: flex;}
+		.nameContain, .infoContain {width:50%; height: 100%;}
+		.nameContain {display: flex; align-items: center; justify-content: flex-end;}
+		.nameRibbon {position: relative; border: 3.5625vmax solid #50C; left: -35.5vmax; top: 1.5vmax; border-left-color: transparent; border-radius: 0 0 5px 0;}
+		.nameRibbon:before {content: attr(data-name); display: block; height: 7.125vmax; width: 38vmax; position: absolute; left: 1vmax; top: -5vmax; background: #80F; line-height: 7.125vmax; text-align: center; border-radius: 5px 0 0 5px;}
 		.mainColumn {width: 33.333333333%; height: 65%; display: flex; flex-direction: column;}
 		.mainColumnHalf {width: 100%; height: 50%;}
 		.spellColumn {width: 33.333333333%; height: 85%; display: flex; flex-direction: column;}
@@ -42,7 +46,12 @@
 	</div>
 	<div class="contain">
 		<div class="sheet" id="main">
-			<div class="header" style="background: #F00;"></div>
+			<div class="header" style="background: #F00;">
+				<div class="nameContain" style="background: #00F">
+					<div class="nameRibbon" data-name="TEST NAME"></div>
+				</div>
+				<div class="infoContain"></div>
+			</div>
 			<div class="mainColumn" style="background: #F80;"></div>
 			<div class="mainColumn">
 				<div class="mainColumnHalf" style="background: #FF0;"></div>
