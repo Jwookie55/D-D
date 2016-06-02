@@ -10,45 +10,49 @@
 		.switcher:before {content:'•'; position: absolute; width: 20px; border-radius: 0 5px 5px 0; left: 4.5vw; top: 50%; background: #765; text-align: center; transform: translateY(-50%); padding: 46% 0;}
 		.switcher A {text-decoration: none; color: #000;}
 		.switcher A:hover {background: rgba(255, 255, 255, 0.5);}
-		.contain {width: 100vw; height: 137.5vmax; background: #555; display: flex; justify-content: center; align-items: center;}
-		.sheet {width: 95vmax; height: 132.5vmax; background: #FFF; display: none; flex-wrap: wrap;}
+		.contain {width: 100vw; height: 139.35vmax; background: #555; display: flex; justify-content: center; align-items: center;}
+		.sheet {width: 95vmax; height: 134.35vmax; background: #FFF; display: none; flex-wrap: wrap;}
 		.sheet:target {display: flex;}
-		.header {width: 95vmax; height: 14.25vmax; display: flex;}
-		.nameContain, .infoContain {width:50%; height: 100%; display: flex; align-items: center;}
+		.header {width: 95vmax; height: 20.1525vmax; display: flex;}
+		.nameContain, .infoContain {width: 47.5vmax; height: 20.1525vmax; display: flex; align-items: center;}
 		.nameContain {justify-content: flex-end;}
 		.nameRibbon {position: relative; border: 3.5625vmax solid #DDD; left: -35.5vmax; top: 1.5vmax; border-left-color: transparent; border-radius: 0 0 5px 0;}
 		.nameRibbon:before {content: attr(data-name); display: block; height: 7.125vmax; width: 38vmax; position: absolute; left: 1vmax; top: -5vmax; background: #FFF; line-height: 7.125vmax; text-align: center; border-radius: 5px 0 0 5px; border: 1px solid #000;}
-		.nameRibbon:after {content: attr(data-label); position: absolute; top: 2.4vmax; left: 3.7vmax; white-space: nowrap;}
+		.nameRibbon:after {content: attr(data-label); position: absolute; top: 2.5vmax; left: 4vmax; white-space: nowrap;}
 		.infoContain {justify-content: flex-start; align-content: center; flex-wrap: wrap; position: relative;}
 		.infoContain:before {content: ''; position: absolute; left: 39.75vmax; width: 0; height: 0; display: block; border: 3.5625vmax solid #DDD; border-right-color: transparent; z-index: 0;}
-		.infoContain > DIV {height: 5.7vmax; width: 14.249999986vmax; background: #FFF; z-index: 1;}
-		.infoContain > DIV:nth-of-type(1) {border-top: 1px solid black; border-left: 1px solid black; padding-left: 5px;}
-		.infoContain > DIV:nth-of-type(2) {border-top: 1px solid black;}
-		.infoContain > DIV:nth-of-type(3) {border-top: 1px solid black; border-right: 1px solid black; padding-right: 5px;}
-		.infoContain > DIV:nth-of-type(4) {border-bottom: 1px solid black; border-left: 1px solid black; padding-left: 5px;}
-		.infoContain > DIV:nth-of-type(5) {border-bottom: 1px solid black;}
-		.infoContain > DIV:nth-of-type(6) {border-bottom: 1px solid black; border-right: 1px solid black; padding-right: 5px;}
-		.mainColumn {width: 31.666666666vmax; height: 61.75vmax; display: flex; flex-direction: column;}
-		.mainColumn:nth-of-type(2) {background: #DDD;/*  border: 5px solid #FFF; */}
-		.mainColumn:nth-of-type(3) {background: #0f0;/*  border: 5px solid #FFF; */}
-		.mainColumn:nth-of-type(4) {background: #00f;/*  border: 5px solid #FFF; */}
-		.mainColumn:nth-of-type(2) .att {height: 8.82142857vmax; border-top: 1px solid #000;}
-		.mainColumn:nth-of-type(2) .other {height: 2.94047619vmax; border-top: 1px solid #00F;}
-		.mainColumnHalf {width: 100%; height: 50%;}
-		.spellColumn {width: 33.333333333%; height: 85%; display: flex; flex-direction: column;}
-		.cantrips {width: 100%; height: 24.86%;}
-		.first {width: 100%; height: 37.57%;}
-		.second {width: 100%; height: 37.57%;}
-		.third {width: 100%; height: 34.89%;}
-		.fourth {width: 100%; height: 33.87%;}
-		.fifth {width: 100%; height: 31.24%;}
-		.sixth {width: 100%; height: 26.57%;}
-		.seventh {width: 100%; height: 25.54%;}
-		.eighth {width: 100%; height: 21.21%;}
-		.ninth {width: 100%; height: 26.68%;}
-		.profEquipContain {width: 100%; height: 20%; display: flex;}
-		.profLang {width: 33.333333333%; height: 100%;}
-		.equip {width: 66.666666666%; height: 100%;}
+		.class, .background, .pName, .race, .align, .exp {height: 5.7vmax; width: 14.249999986vmax; background: #FFF; z-index: 1;}
+		.class {border-top: 1px solid black; border-left: 1px solid black; padding-left: 5px;}
+		.background {border-top: 1px solid black;}
+		.pName {border-top: 1px solid black; border-right: 1px solid black; padding-right: 5px;}
+		.race {border-bottom: 1px solid black; border-left: 1px solid black; padding-left: 5px;}
+		.align {border-bottom: 1px solid black;}
+		.exp {border-bottom: 1px solid black; border-right: 1px solid black; padding-right: 5px;}
+		.info {height: 4.5vmax; line-height: 4.5vmax; text-align: center; font-size: 1.2vmax;}
+		.infoLabel {border-top: 1px solid #DDD;}
+		.mainColumn {width: 31.666666666vmax; height: 87.3275vmax; display: flex; flex-direction: column;}
+		.mainColumn:nth-of-type(3) {background: #0f0;}
+		.mainColumn:nth-of-type(4) {background: #00f;}
+		.attribute {background: linear-gradient(135deg, transparent 10px, #DDD 0) top left, linear-gradient(225deg, transparent 10px, #DDD 0) top right, linear-gradient(315deg, transparent 10px, #DDD 0) bottom right, linear-gradient(45deg, transparent 10px, #DDD 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 10px solid #FFF;}
+		.att {height: 12.47535714285714vmax;}
+		.other {height: 4.15845238095238vmax; display: flex; align-items: center; justify-content: center;}
+		.otherValue {width: 3.3267619047619vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: #FFF; border: 1px solid #000; text-align: center;}
+		.otherLabel {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center;}
+		.mainColumnHalf {width: 31.666666666vmax; height: 43.66375vmax;}
+		.spellColumn {width: 31.666666666vmax; height: 85%; display: flex; flex-direction: column;}
+		.cantrips {width: 31.666666666vmax; height: 24.86%;}
+		.first {width: 31.666666666vmax; height: 37.57%;}
+		.second {width: 31.666666666vmax; height: 37.57%;}
+		.third {width: 31.666666666vmax; height: 34.89%;}
+		.fourth {width: 31.666666666vmax; height: 33.87%;}
+		.fifth {width: 31.666666666vmax; height: 31.24%;}
+		.sixth {width: 31.666666666vmax; height: 26.57%;}
+		.seventh {width: 31.666666666vmax; height: 25.54%;}
+		.eighth {width: 31.666666666vmax; height: 21.21%;}
+		.ninth {width: 31.666666666vmax; height: 26.68%;}
+		.profEquipContain {width: 95vmax; height: 26.87vmax; display: flex;}
+		.profLang {width: 31.666666666vmax; height: 26.87vmax;}
+		.equip {width: 63.333333332vmax; height: 26.87vmax;}
 	</style>
 </head>
 <body>
@@ -66,53 +70,62 @@
 					<div class="nameRibbon" data-name="TEST NAME" data-label="Character Name"></div>
 				</div>
 				<div class="infoContain">
-					<div>
-						<div style="height: 4.5vmax;"></div>
-						<div style="border-top: 1px solid #DDD;">Class & Level</div>
+					<div class="class">
+						<div class="info">Monk 10/Rongue 10</div>
+						<div class="infoLabel">Class & Level</div>
 					</div>
-					<div>
-						<div style="height: 4.5vmax;"></div>
-						<div style="border-top: 1px solid #DDD;">Background</div>
+					<div class="background">
+						<div class="info">Charlatan</div>
+						<div class="infoLabel">Background</div>
 					</div>
-					<div>
-						<div style="height: 4.5vmax;"></div>
-						<div style="border-top: 1px solid #DDD;">Player Name</div>
+					<div class="pName">
+						<div class="info">Jonathan</div>
+						<div class="infoLabel">Player Name</div>
 					</div>
-					<div>
-						<div style="height: 4.5vmax;"></div>
-						<div style="border-top: 1px solid #DDD;">Race</div>
+					<div class="race">
+						<div class="info">Wood Elf</div>
+						<div class="infoLabel">Race</div>
 					</div>
-					<div>
-						<div style="height: 4.5vmax;"></div>
-						<div style="border-top: 1px solid #DDD;">Alignment</div>
+					<div class="align">
+						<div class="info">Chaotic Neutral</div>
+						<div class="infoLabel">Alignment</div>
 					</div>
-					<div>
-						<div style="height: 4.5vmax;"></div>
-						<div style="border-top: 1px solid #DDD;">Experience Points</div>
+					<div class="exp">
+						<div class="info">10,000,000</div>
+						<div class="infoLabel">Experience Points</div>
 					</div>
 				</div>
 			</div>
+			<div class="mainColumn attribute">
+				<div class="other">
+					<div class="otherValue">+10</div>
+					<div class="otherLabel">Proficiency Bonus</div>
+				</div>
+				<div class="other">
+					<div class="otherValue">+10</div>
+					<div class="otherLabel">Proficiency Bonus</div>
+				</div>
+				<div class="att"></div>
+				<div class="att"></div>
+				<div class="att"></div>
+				<div class="att"></div>
+				<div class="att"></div>
+				<div class="att"></div>
+				<div class="other">
+					<div class="otherValue">+10</div>
+					<div class="otherLabel">Proficiency Bonus</div>
+				</div>
+			</div>
 			<div class="mainColumn">
-				<div class="other"></div>
-				<div class="other"></div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="other"></div>
+				<div class="mainColumnHalf" style="background: #654;"></div>
+				<div class="mainColumnHalf"></div>
 			</div>
 			<div class="mainColumn">
 				<div class="mainColumnHalf"></div>
-				<div class="mainColumnHalf"></div>
+				<div class="mainColumnHalf" style="background: #888;"></div>
 			</div>
-			<div class="mainColumn">
-				<div class="mainColumnHalf"></div>
-				<div class="mainColumnHalf"></div>
-			</div>
-			<div class="profEquipContain">
-				<div class="profLang"></div>
+			<div class="profEquipContain" style="background: #F80;">
+				<div class="profLang" style="background: #F88;"></div>
 				<div class="equip"></div>
 			</div>
 		</div>
