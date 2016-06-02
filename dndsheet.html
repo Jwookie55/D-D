@@ -36,8 +36,10 @@
 		.attribute {background: linear-gradient(135deg, transparent 10px, #DDD 0) top left, linear-gradient(225deg, transparent 10px, #DDD 0) top right, linear-gradient(315deg, transparent 10px, #DDD 0) bottom right, linear-gradient(45deg, transparent 10px, #DDD 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 10px solid #FFF;}
 		.att {height: 12.47535714285714vmax;}
 		.other {height: 4.15845238095238vmax; display: flex; align-items: center; justify-content: center;}
-		.otherValue {width: 3.3267619047619vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: #FFF; border: 1px solid #000; text-align: center;}
-		.otherLabel {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center;}
+		.otherValue {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax;  background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: 2vmax; z-index: 1;}
+		.otherValue div {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax;  background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
+		.otherLabel {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #000 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, #000 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: -1vmax;}
+		.otherLabel div {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
 		.mainColumnHalf {width: 31.666666666vmax; height: 43.66375vmax;}
 		.spellColumn {width: 31.666666666vmax; height: 85%; display: flex; flex-direction: column;}
 		.cantrips {width: 31.666666666vmax; height: 24.86%;}
@@ -67,43 +69,43 @@
 		<div class="sheet" id="main">
 			<div class="header">
 				<div class="nameContain">
-					<div class="nameRibbon" data-name="TEST NAME" data-label="Character Name"></div>
+					<div class="nameRibbon" data-name="TEST NAME" data-label="CHARACTER NAME"></div>
 				</div>
 				<div class="infoContain">
 					<div class="class">
 						<div class="info">Monk 10/Rongue 10</div>
-						<div class="infoLabel">Class & Level</div>
+						<div class="infoLabel">CLASS & LEVEL</div>
 					</div>
 					<div class="background">
 						<div class="info">Charlatan</div>
-						<div class="infoLabel">Background</div>
+						<div class="infoLabel">BACKGROUND</div>
 					</div>
 					<div class="pName">
 						<div class="info">Jonathan</div>
-						<div class="infoLabel">Player Name</div>
+						<div class="infoLabel">PLAYER NAME</div>
 					</div>
 					<div class="race">
 						<div class="info">Wood Elf</div>
-						<div class="infoLabel">Race</div>
+						<div class="infoLabel">RACE</div>
 					</div>
 					<div class="align">
 						<div class="info">Chaotic Neutral</div>
-						<div class="infoLabel">Alignment</div>
+						<div class="infoLabel">ALIGNMENT</div>
 					</div>
 					<div class="exp">
 						<div class="info">10,000,000</div>
-						<div class="infoLabel">Experience Points</div>
+						<div class="infoLabel">EXPERIENCE POINTS</div>
 					</div>
 				</div>
 			</div>
 			<div class="mainColumn attribute">
 				<div class="other">
-					<div class="otherValue">+10</div>
-					<div class="otherLabel">Proficiency Bonus</div>
+					<div class="otherValue"><div>10</div></div>
+					<div class="otherLabel"><div>PROFICIENCY BONUS</div></div>
 				</div>
 				<div class="other">
-					<div class="otherValue">+10</div>
-					<div class="otherLabel">Proficiency Bonus</div>
+					<div class="otherValue"><div>X</div></div>
+					<div class="otherLabel"><div>INSPIRATION</div></div>
 				</div>
 				<div class="att"></div>
 				<div class="att"></div>
@@ -112,8 +114,8 @@
 				<div class="att"></div>
 				<div class="att"></div>
 				<div class="other">
-					<div class="otherValue">+10</div>
-					<div class="otherLabel">Proficiency Bonus</div>
+					<div class="otherValue"><div>3</div></div>
+					<div class="otherLabel"><div>PASSIVE WISDOM (PERCEPTION)</div></div>
 				</div>
 			</div>
 			<div class="mainColumn">
