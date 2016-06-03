@@ -43,12 +43,13 @@
 		.saveThrowCheck:before {content: ''; display: block; height: 0.5vmax; width: 0.5vmax; position: absolute; top:0.1vmax; left: 0.1vmax;}
 		.skillCheck:before {content: ''; display: block; height: 0.5vmax; width: 0.5vmax; position: absolute; top:0.1vmax; left: 0.1vmax; border-radius: 50%;}
 		.skillInput:checked ~ .saveThrowCheck:before, .skillInput:checked ~ .skillCheck:before {background: #000;}
-		.bonus {background: #FF0; z-index: 1; position: relative; left: -2vmax; line-height: 3.5vmax; text-align: center; width: 5.5vmax; height: 3.5vmax; top: -1.25vmax;}
+		.bonus {z-index: 1; position: relative; left: -2vmax; line-height: 3.5vmax; text-align: center; width: 6.5vmax; height: 3.5vmax; top: -0.9vmax; background: linear-gradient(135deg, transparent 8px, #000 0) top left, linear-gradient(225deg, transparent 8px, #000 0) top right, linear-gradient(315deg, transparent 21px, #000 0) bottom right, linear-gradient(45deg, transparent 21px, #000 0) bottom left; background-size: 50% 25%, 50% 25%, 50% 75%, 50% 75%; background-repeat: no-repeat;}
+		.bonus > div {width: 6.5vmax; height: 3.5vmax; background: linear-gradient(135deg, transparent 8px, #FFF 0) top left, linear-gradient(225deg, transparent 8px, #FFF 0) top right, linear-gradient(315deg, transparent 21px, #FFF 0) bottom right, linear-gradient(45deg, transparent 21px, #FFF 0) bottom left; background-size: 50% 25%, 50% 25%, 50% 75%, 50% 75%; background-repeat: no-repeat; border: 1px solid transparent;}
 		.attributeContain {height: 10.6535238095238vmax; width: 10.6535238095238vmax; position: relative; left: -2vmax; text-align: center; top: -3.5vmax; background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat;}
 		.attributeContain > div {height: 10.6535238095238vmax; width: 10.6535238095238vmax; position: relative; background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 1px solid transparent;}
-		.attributeValue {height: 9.6535238095238vmax; line-height: 9.6535238095238vmax;}
+		.attributeValue {height: 9.535238095238vmax; line-height: 11.6535238095238vmax; font-size: 34pt;}
 		.other {height: 4.15845238095238vmax; display: flex; align-items: center; justify-content: center;}
-		.otherValue {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax;  background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: 2vmax; z-index: 1;}
+		.otherValue {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: 2vmax; z-index: 1;}
 		.otherValue > div {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
 		.otherLabel {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #000 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, #000 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: -1vmax;}
 		.otherLabel > div {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
@@ -121,7 +122,9 @@
 				</div>
 				<div class="att">
 					<div class="stat">
-						<div class="bonus">+4</div>
+						<div class="bonus">
+							<div>+4</div>
+						</div>
 						<div class="attributeContain">
 							<div>
 								<div class="attributeValue">20</div>
@@ -150,7 +153,9 @@
 				</div>
 				<div class="att">
 					<div class="stat">
-						<div class="bonus">+4</div>
+						<div class="bonus">
+							<div>+4</div>
+						</div>
 						<div class="attributeContain">
 							<div>
 								<div class="attributeValue">20</div>
@@ -195,7 +200,9 @@
 				</div>
 				<div class="att">
 					<div class="stat">
-						<div class="bonus">+4</div>
+						<div class="bonus">
+							<div>+4</div>
+						</div>
 						<div class="attributeContain">
 							<div>
 								<div class="attributeValue">20</div>
@@ -216,7 +223,9 @@
 				</div>
 				<div class="att">
 					<div class="stat">
-						<div class="bonus">+4</div>
+						<div class="bonus">
+							<div>+4</div>
+						</div>
 						<div class="attributeContain">
 							<div>
 								<div class="attributeValue">20</div>
@@ -277,7 +286,9 @@
 				</div>
 				<div class="att">
 					<div class="stat">
-						<div class="bonus">+4</div>
+						<div class="bonus">
+							<div>+4</div>
+						</div>
 						<div class="attributeContain">
 							<div>
 								<div class="attributeValue">20</div>
@@ -338,7 +349,9 @@
 				</div>
 				<div class="att">
 					<div class="stat">
-						<div class="bonus">+4</div>
+						<div class="bonus">
+							<div>+4</div>
+						</div>
 						<div class="attributeContain">
 							<div>
 								<div class="attributeValue">20</div>
