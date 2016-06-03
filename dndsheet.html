@@ -31,7 +31,7 @@
 		.info {height: 4.5vmax; line-height: 4.5vmax; text-align: center; font-size: 1.2vmax;}
 		.infoLabel {border-top: 1px solid #DDD;}
 		.mainColumn {width: 31.666666666vmax; height: 87.3275vmax; display: flex; flex-direction: column;}
-		.attribute {background: linear-gradient(135deg, transparent 10px, #DDD 0) top left, linear-gradient(225deg, transparent 10px, #DDD 0) top right, linear-gradient(315deg, transparent 10px, #DDD 0) bottom right, linear-gradient(45deg, transparent 10px, #DDD 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 7px solid #FFF;}
+		.attribute, .combatValues, .backgroundInfo {background: linear-gradient(135deg, transparent 10px, #DDD 0) top left, linear-gradient(225deg, transparent 10px, #DDD 0) top right, linear-gradient(315deg, transparent 10px, #DDD 0) bottom right, linear-gradient(45deg, transparent 10px, #DDD 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 7px solid #FFF;}
 		.att {height: 12.47535714285714vmax; display: flex; justify-content: center; padding-top: 1vmax;}
 		.stat {border-top: 1px solid #000; position: relative; top: 0.55vmax; display: flex; align-items: center; flex-wrap: wrap; width: 7vmax; margin-left: 3vmax; justify-content: center;}
 		.skills {height: 0.55vmax; width: 15.67192380899048vmax; border-top: 1px solid #000; border-left: 1px solid #000; border-radius: 10px 0;}
@@ -54,6 +54,7 @@
 		.otherLabel {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #000 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, #000 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: -1vmax;}
 		.otherLabel > div {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
 		.mainColumnHalf {width: 31.666666666vmax; height: 43.66375vmax;}
+		.combatValues {}
 		.spellColumn {width: 31.666666666vmax; height: 85%; display: flex; flex-direction: column;}
 		.cantrips {width: 31.666666666vmax; height: 24.86%;}
 		.first {width: 31.666666666vmax; height: 37.57%;}
@@ -408,12 +409,12 @@
 				</div>
 			</div>
 			<div class="mainColumn">
-				<div class="mainColumnHalf" style="background: #654;"></div>
+				<div class="mainColumnHalf combatValues"></div>
 				<div class="mainColumnHalf"></div>
 			</div>
 			<div class="mainColumn">
+				<div class="mainColumnHalf backgroundInfo"></div>
 				<div class="mainColumnHalf"></div>
-				<div class="mainColumnHalf" style="background: #888;"></div>
 			</div>
 			<div class="profEquipContain" style="background: #F80;">
 				<div class="profLang" style="background: #F88;"></div>
