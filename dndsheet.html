@@ -31,9 +31,9 @@
 		.info {height: 4.5vmax; line-height: 4.5vmax; text-align: center; font-size: 1.2vmax;}
 		.infoLabel {border-top: 1px solid #DDD;}
 		.mainColumn {width: 31.666666666vmax; height: 87.3275vmax; display: flex; flex-direction: column;}
-		.attribute {background: linear-gradient(135deg, transparent 10px, #DDD 0) top left, linear-gradient(225deg, transparent 10px, #DDD 0) top right, linear-gradient(315deg, transparent 10px, #DDD 0) bottom right, linear-gradient(45deg, transparent 10px, #DDD 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 10px solid #FFF;}
+		.attribute {background: linear-gradient(135deg, transparent 10px, #DDD 0) top left, linear-gradient(225deg, transparent 10px, #DDD 0) top right, linear-gradient(315deg, transparent 10px, #DDD 0) bottom right, linear-gradient(45deg, transparent 10px, #DDD 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 7px solid #FFF;}
 		.att {height: 12.47535714285714vmax; display: flex; justify-content: center; padding-top: 1vmax;}
-		.stat {border-top: 1px solid #000; position: relative; top: 0.55vmax; display: flex; align-items: center; flex-direction: column; width: 7vmax; margin-left: 3vmax;}
+		.stat {border-top: 1px solid #000; position: relative; top: 0.55vmax; display: flex; align-items: center; flex-wrap: wrap; width: 7vmax; margin-left: 3vmax; justify-content: center;}
 		.skills {height: 0.55vmax; width: 15.67192380899048vmax; border-top: 1px solid #000; border-left: 1px solid #000; border-radius: 10px 0;}
 		.skillContain {position: relative; margin: 0.55vmax;}
 		.skillInput {position: absolute; visibility: hidden;}
@@ -43,8 +43,8 @@
 		.saveThrowCheck:before {content: ''; display: block; height: 0.5vmax; width: 0.5vmax; position: absolute; top:0.1vmax; left: 0.1vmax;}
 		.skillCheck:before {content: ''; display: block; height: 0.5vmax; width: 0.5vmax; position: absolute; top:0.1vmax; left: 0.1vmax; border-radius: 50%;}
 		.skillInput:checked ~ .saveThrowCheck:before, .skillInput:checked ~ .skillCheck:before {background: #000;}
-		.bonus {z-index: 1; position: relative; left: -2vmax; background: #FFF;}
-		.attributeContain {height: 10.6535238095238vmax; width: 10.6535238095238vmax; position: relative; left: -2vmax; text-align: center; top: -1vmax; background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat;}
+		.bonus {background: #FF0; z-index: 1; position: relative; left: -2vmax; line-height: 3.5vmax; text-align: center; width: 5.5vmax; height: 3.5vmax; top: -1.25vmax;}
+		.attributeContain {height: 10.6535238095238vmax; width: 10.6535238095238vmax; position: relative; left: -2vmax; text-align: center; top: -3.5vmax; background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat;}
 		.attributeContain > div {height: 10.6535238095238vmax; width: 10.6535238095238vmax; position: relative; background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 1px solid transparent;}
 		.attributeValue {height: 9.6535238095238vmax; line-height: 9.6535238095238vmax;}
 		.other {height: 4.15845238095238vmax; display: flex; align-items: center; justify-content: center;}
@@ -123,8 +123,10 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div><div class="attributeValue">20</div>
-							<div class="attributeLabel">STRENGTH</div></div>
+							<div>
+								<div class="attributeValue">20</div>
+								<div class="attributeLabel">STRENGTH</div>
+							</div>
 						</div>
 					</div>
 					<div class="skills">
@@ -150,8 +152,10 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="attributeValue">20</div>
-							<div class="attributeLabel">DEXTERITY</div>
+							<div>
+								<div class="attributeValue">20</div>
+								<div class="attributeLabel">DEXTERITY</div>
+							</div>
 						</div>
 					</div>
 					<div class="skills">
@@ -193,8 +197,10 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="attributeValue">20</div>
-							<div class="attributeLabel">CONSTITUTION</div>
+							<div>
+								<div class="attributeValue">20</div>
+								<div class="attributeLabel">CONSTITUTION</div>
+							</div>
 						</div>
 					</div>
 					<div class="skills">
@@ -212,8 +218,10 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="attributeValue">20</div>
-							<div class="attributeLabel">INTELLIGENCE</div>
+							<div>
+								<div class="attributeValue">20</div>
+								<div class="attributeLabel">INTELLIGENCE</div>
+							</div>
 						</div>
 					</div>
 					<div class="skills">
@@ -271,8 +279,10 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="attributeValue">20</div>
-							<div class="attributeLabel">WISDOM</div>
+							<div>
+								<div class="attributeValue">20</div>
+								<div class="attributeLabel">WISDOM</div>
+							</div>
 						</div>
 					</div>
 					<div class="skills">
@@ -330,8 +340,10 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="attributeValue">20</div>
-							<div class="attributeLabel">CHARISMA</div>
+							<div>
+								<div class="attributeValue">20</div>
+								<div class="attributeLabel">CHARISMA</div>
+							</div>
 						</div>
 					</div>
 					<div class="skills">
