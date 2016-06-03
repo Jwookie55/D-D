@@ -31,10 +31,19 @@
 		.info {height: 4.5vmax; line-height: 4.5vmax; text-align: center; font-size: 1.2vmax;}
 		.infoLabel {border-top: 1px solid #DDD;}
 		.mainColumn {width: 31.666666666vmax; height: 87.3275vmax; display: flex; flex-direction: column;}
-		.mainColumn:nth-of-type(3) {background: #0f0;}
-		.mainColumn:nth-of-type(4) {background: #00f;}
 		.attribute {background: linear-gradient(135deg, transparent 10px, #DDD 0) top left, linear-gradient(225deg, transparent 10px, #DDD 0) top right, linear-gradient(315deg, transparent 10px, #DDD 0) bottom right, linear-gradient(45deg, transparent 10px, #DDD 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 10px solid #FFF;}
-		.att {height: 12.47535714285714vmax;}
+		.att {height: 12.47535714285714vmax; display: flex; justify-content: center; padding-top: 1vmax;}
+		.stat {border-top: 1px solid #000; position: relative; top: 0.55vmax; display: flex; align-items: center; flex-direction: column; width: 7vmax; margin-left: 3vmax;}
+		.skills {height: 0.55vmax; width: 15.67192380899048vmax; border-top: 1px solid #000; border-left: 1px solid #000; border-radius: 10px 0;}
+		.skillContain {position: relative; margin: 0.55vmax;}
+		.skillInput {position: absolute; visibility: hidden;}
+		.skillLabel {display: block; position: relative; padding-left: 1.5vmax; z-index: 1;}
+		.saveThrowCheck {display: block; position: absolute; border: 2px solid rgb(0, 0, 0); height: 1vmax; width: 1vmax; left: 0; top: 0; transform: rotateZ(45deg);}
+		.skillCheck {display: block; position: absolute; border: 2px solid rgb(0, 0, 0); height: 1vmax; width: 1vmax; left: 0; top: 0; border-radius: 50%;}
+		.saveThrowCheck:before {content: ''; display: block; height: 0.5vmax; width: 0.5vmax; position: absolute; top:0.1vmax; left: 0.1vmax;}
+		.skillCheck:before {content: ''; display: block; height: 0.5vmax; width: 0.5vmax; position: absolute; top:0.1vmax; left: 0.1vmax; border-radius: 50%;}
+		.skillInput:checked ~ .saveThrowCheck:before, .skillInput:checked ~ .skillCheck:before {background: #000;}
+		.attributeContain {background: #FFF; width: 10.6535238095238vmax; position: relative; left: -2vmax;}
 		.other {height: 4.15845238095238vmax; display: flex; align-items: center; justify-content: center;}
 		.otherValue {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax;  background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: 2vmax; z-index: 1;}
 		.otherValue div {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax;  background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
@@ -107,12 +116,264 @@
 					<div class="otherValue"><div>X</div></div>
 					<div class="otherLabel"><div>INSPIRATION</div></div>
 				</div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="att"></div>
-				<div class="att"></div>
+				<div class="att">
+					<div class="stat">
+						<div class="bonus">+4</div>
+						<div class="attributeContain">
+							<div class="atttributeValue">20</div>
+							<div class="attributeLabel">STRENGTH</div>
+						</div>
+					</div>
+					<div class="skills">
+						<div class="skillContain">
+							<input type="checkbox" id="saveStr" class="skillInput">
+							<label for="saveStr" class="skillLabel">
+								<span class="skillValue">10</span>
+								<span>SAVING THROWS</span>
+							</label>
+							<div class="saveThrowCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="athletics" class="skillInput">
+							<label for="athletics" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>ATHLETICS</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+					</div>
+				</div>
+				<div class="att">
+					<div class="stat">
+						<div class="bonus">+4</div>
+						<div class="attributeContain">
+							<div class="atttributeValue">20</div>
+							<div class="attributeLabel">DEXTERITY</div>
+						</div>
+					</div>
+					<div class="skills">
+						<div class="skillContain">
+							<input type="checkbox" id="saveDex" class="skillInput">
+							<label for="saveDex" class="skillLabel">
+								<span class="skillValue">10</span>
+								<span>SAVING THROWS</span>
+							</label>
+							<div class="saveThrowCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="acrobatics" class="skillInput">
+							<label for="acrobatics" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>ACROBATICS</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="sleightOfHand" class="skillInput">
+							<label for="sleightOfHand" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>SLEIGHT OF HAND</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="stealth" class="skillInput">
+							<label for="stealth" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>STEALTH</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+					</div>
+				</div>
+				<div class="att">
+					<div class="stat">
+						<div class="bonus">+4</div>
+						<div class="attributeContain">
+							<div class="atttributeValue">20</div>
+							<div class="attributeLabel">CONSTITUTION</div>
+						</div>
+					</div>
+					<div class="skills">
+						<div class="skillContain">
+							<input type="checkbox" id="saveCon" class="skillInput">
+							<label for="saveCon" class="skillLabel">
+								<span class="skillValue">10</span>
+								<span>SAVING THROWS</span>
+							</label>
+							<div class="saveThrowCheck"></div>
+						</div>
+					</div>
+				</div>
+				<div class="att">
+					<div class="stat">
+						<div class="bonus">+4</div>
+						<div class="attributeContain">
+							<div class="atttributeValue">20</div>
+							<div class="attributeLabel">INTELLIGENCE</div>
+						</div>
+					</div>
+					<div class="skills">
+						<div class="skillContain">
+							<input type="checkbox" id="saveInt" class="skillInput">
+							<label for="saveInt" class="skillLabel">
+								<span class="skillValue">10</span>
+								<span>SAVING THROWS</span>
+							</label>
+							<div class="saveThrowCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="arcana" class="skillInput">
+							<label for="arcana" class="skillLabel">
+								<span class="skillValue">10</span>
+								<span>ARCANA</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="history" class="skillInput">
+							<label for="history" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>HISTORY</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="investigation" class="skillInput">
+							<label for="investigation" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>INVESTIGATION</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="nature" class="skillInput">
+							<label for="nature" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>NATURE</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="religion" class="skillInput">
+							<label for="religion" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>RELIGION</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+					</div>
+				</div>
+				<div class="att">
+					<div class="stat">
+						<div class="bonus">+4</div>
+						<div class="attributeContain">
+							<div class="atttributeValue">20</div>
+							<div class="attributeLabel">WISDOM</div>
+						</div>
+					</div>
+					<div class="skills">
+						<div class="skillContain">
+							<input type="checkbox" id="saveWis" class="skillInput">
+							<label for="saveWis" class="skillLabel">
+								<span class="skillValue">10</span>
+								<span>SAVING THROWS</span>
+							</label>
+							<div class="saveThrowCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="animalHandling" class="skillInput">
+							<label for="animalHandling" class="skillLabel">
+								<span class="skillValue">10</span>
+								<span>ANIMAL HANDLING</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="insight" class="skillInput">
+							<label for="insight" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>INSIGHT</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="medicine" class="skillInput">
+							<label for="medicine" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>MEDICINE</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="perception" class="skillInput">
+							<label for="perception" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>PERCEPTION</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="survival" class="skillInput">
+							<label for="survival" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>SURVIVAL</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+					</div>
+				</div>
+				<div class="att">
+					<div class="stat">
+						<div class="bonus">+4</div>
+						<div class="attributeContain">
+							<div class="atttributeValue">20</div>
+							<div class="attributeLabel">CHARISMA</div>
+						</div>
+					</div>
+					<div class="skills">
+						<div class="skillContain">
+							<input type="checkbox" id="saveCha" class="skillInput">
+							<label for="saveCha" class="skillLabel">
+								<span class="skillValue">10</span>
+								<span>SAVING THROWS</span>
+							</label>
+							<div class="saveThrowCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="deception" class="skillInput">
+							<label for="deception" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>DECEPTION</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="intimidation" class="skillInput">
+							<label for="intimidation" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>INTIMIDATION</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="performance" class="skillInput">
+							<label for="performance" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>PERFORMANCE</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+						<div class="skillContain">
+							<input type="checkbox" id="persuasion" class="skillInput">
+							<label for="persuasion" class="skillLabel" >
+								<span class="skillValue">10</span>
+								<span>PERSUASION</span>
+							</label>
+							<div class="skillCheck"></div>
+						</div>
+					</div>
+				</div>
 				<div class="other">
 					<div class="otherValue"><div>3</div></div>
 					<div class="otherLabel"><div>PASSIVE WISDOM (PERCEPTION)</div></div>
