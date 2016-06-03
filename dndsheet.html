@@ -43,12 +43,15 @@
 		.saveThrowCheck:before {content: ''; display: block; height: 0.5vmax; width: 0.5vmax; position: absolute; top:0.1vmax; left: 0.1vmax;}
 		.skillCheck:before {content: ''; display: block; height: 0.5vmax; width: 0.5vmax; position: absolute; top:0.1vmax; left: 0.1vmax; border-radius: 50%;}
 		.skillInput:checked ~ .saveThrowCheck:before, .skillInput:checked ~ .skillCheck:before {background: #000;}
-		.attributeContain {background: #FFF; width: 10.6535238095238vmax; position: relative; left: -2vmax;}
+		.bonus {z-index: 1; position: relative; left: -2vmax; background: #FFF;}
+		.attributeContain {height: 10.6535238095238vmax; width: 10.6535238095238vmax; position: relative; left: -2vmax; text-align: center; top: -1vmax; background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat;}
+		.attributeContain > div {height: 10.6535238095238vmax; width: 10.6535238095238vmax; position: relative; background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; border: 1px solid transparent;}
+		.attributeValue {height: 9.6535238095238vmax; line-height: 9.6535238095238vmax;}
 		.other {height: 4.15845238095238vmax; display: flex; align-items: center; justify-content: center;}
 		.otherValue {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax;  background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: 2vmax; z-index: 1;}
-		.otherValue div {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax;  background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
+		.otherValue > div {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
 		.otherLabel {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #000 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, #000 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: -1vmax;}
-		.otherLabel div {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
+		.otherLabel > div {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
 		.mainColumnHalf {width: 31.666666666vmax; height: 43.66375vmax;}
 		.spellColumn {width: 31.666666666vmax; height: 85%; display: flex; flex-direction: column;}
 		.cantrips {width: 31.666666666vmax; height: 24.86%;}
@@ -120,8 +123,8 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="atttributeValue">20</div>
-							<div class="attributeLabel">STRENGTH</div>
+							<div><div class="attributeValue">20</div>
+							<div class="attributeLabel">STRENGTH</div></div>
 						</div>
 					</div>
 					<div class="skills">
@@ -147,7 +150,7 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="atttributeValue">20</div>
+							<div class="attributeValue">20</div>
 							<div class="attributeLabel">DEXTERITY</div>
 						</div>
 					</div>
@@ -190,7 +193,7 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="atttributeValue">20</div>
+							<div class="attributeValue">20</div>
 							<div class="attributeLabel">CONSTITUTION</div>
 						</div>
 					</div>
@@ -209,7 +212,7 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="atttributeValue">20</div>
+							<div class="attributeValue">20</div>
 							<div class="attributeLabel">INTELLIGENCE</div>
 						</div>
 					</div>
@@ -268,7 +271,7 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="atttributeValue">20</div>
+							<div class="attributeValue">20</div>
 							<div class="attributeLabel">WISDOM</div>
 						</div>
 					</div>
@@ -327,7 +330,7 @@
 					<div class="stat">
 						<div class="bonus">+4</div>
 						<div class="attributeContain">
-							<div class="atttributeValue">20</div>
+							<div class="attributeValue">20</div>
 							<div class="attributeLabel">CHARISMA</div>
 						</div>
 					</div>
