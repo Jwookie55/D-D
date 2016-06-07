@@ -7,7 +7,7 @@
 		* {margin: 0; padding: 0; box-sizing: border-box; font-family: monospace;}
 		.switcher {width: 5vw; position: fixed; top: 2.5vh; left: -4.5vw; z-index: 1000; display: flex; flex-direction: column; background: #543; transition: left 0.5s; padding: 5px 0; border-bottom: 5px solid #654; border-top: 5px solid #654; box-shadow: inset -7px 0 5px 3px #321; align-items: center;}
 		.switcher:focus, .switcher:hover {left: 0; outline: none;}
-		.switcher:before {content:'•'; position: absolute; width: 20px; border-radius: 0 5px 5px 0; left: 4.5vw; top: 50%; background: #765; text-align: center; transform: translateY(-50%); padding: 46% 0;}
+		.switcher:before {content:'•'; position: absolute; width: 20px; border-radius: 0 5px 5px 0; left: 4.5vw; top: 50%; background: #765; text-align: center; transform: translateY(-50%); padding: 47.5% 0;}
 		.switcher A {text-decoration: none; color: #000;}
 		.switcher A:hover {background: rgba(255, 255, 255, 0.5);}
 		.contain {width: 100vw; height: 139.35vmax; background: #555; display: flex; justify-content: center; align-items: center;}
@@ -51,10 +51,12 @@
 		.other {height: 4.15845238095238vmax; display: flex; align-items: center; justify-content: center;}
 		.otherValue {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, transparent 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, transparent 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: 2vmax; z-index: 1;}
 		.otherValue > div {width: 6.6535238095238vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, transparent 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, transparent 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
-		.otherLabel {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #000 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, #000 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: -1vmax;}
-		.otherLabel > div {width: 22.67192380899048vmax; height: 3.3267619047619vmax; line-height: 3.3267619047619vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
+		.otherLabel {width: 22.67192380899048vmax; height: 2.826761905vmax; line-height: 2.826761905vmax; background: linear-gradient(135deg, #000 10px, #000 0) top left, linear-gradient(225deg, transparent 10px, #000 0) top right, linear-gradient(315deg, transparent 10px, #000 0) bottom right, linear-gradient(45deg, #000 10px, #000 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; position: relative; left: -1vmax;}
+		.otherLabel > div {width: 22.67192380899048vmax; height: 2.826761905vmax; line-height: 2.826761905vmax; background: linear-gradient(135deg, #FFF 10px, #FFF 0) top left, linear-gradient(225deg, transparent 10px, #FFF 0) top right, linear-gradient(315deg, transparent 10px, #FFF 0) bottom right, linear-gradient(45deg, #FFF 10px, #FFF 0) bottom left; background-size: 50% 50%; background-repeat: no-repeat; text-align: center; border: 1px solid transparent;}
 		.mainColumnHalf {width: 31.666666666vmax; height: 43.66375vmax;}
-		.combatValues {}
+		.acInitSpd {height: 10.9159375vmax; width: 31.666666666vmax; display: flex;}
+		.armorClass {width: 9.5vmax;}
+		.initiative, .speed {width: 11.083333333vmax; border: 1px solid #0F0;}
 		.spellColumn {width: 31.666666666vmax; height: 85%; display: flex; flex-direction: column;}
 		.cantrips {width: 31.666666666vmax; height: 24.86%;}
 		.first {width: 31.666666666vmax; height: 37.57%;}
@@ -76,6 +78,7 @@
 		<a href="#">New</a>
 		<a href="#main">Main</a>
 		<a href="#spells">Spells</a>
+		<a href="#details">Details</a>
 		<a href="#">Save</a>
 		<a href="#">Roller</a>
 	</div>
@@ -114,7 +117,7 @@
 			</div>
 			<div class="mainColumn attribute">
 				<div class="other">
-					<div class="otherValue"><div>10</div></div>
+					<div class="otherValue"><div>6</div></div>
 					<div class="otherLabel"><div>PROFICIENCY BONUS</div></div>
 				</div>
 				<div class="other">
@@ -404,12 +407,21 @@
 					</div>
 				</div>
 				<div class="other">
-					<div class="otherValue"><div>3</div></div>
+					<div class="otherValue"><div>20</div></div>
 					<div class="otherLabel"><div>PASSIVE WISDOM (PERCEPTION)</div></div>
 				</div>
 			</div>
 			<div class="mainColumn">
-				<div class="mainColumnHalf combatValues"></div>
+				<div class="mainColumnHalf combatValues">
+					<div class="acInitSpd">
+						<div class="armorClass"></div>
+						<div class="initiative"></div>
+						<div class="speed"></div>
+					</div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 				<div class="mainColumnHalf"></div>
 			</div>
 			<div class="mainColumn">
@@ -424,7 +436,7 @@
 		<div class="sheet" id="spells">
 			<div class="header">
 				<div class="nameContain">
-					<div class="nameRibbon" data-name="TEST NAME"></div>
+					<div class="nameRibbon" data-name="TEST NAME" data-label="CHARACTER NAME"></div>
 				</div>
 				<div class="infoContain">
 					<div></div>
@@ -450,6 +462,14 @@
 				<div class="seventh"></div>
 				<div class="eighth"></div>
 				<div class="ninth"></div>
+			</div>
+		</div>
+		<div class="sheet" id="details">
+			<div class="header">
+				<div class="nameContain">
+					<div class="nameRibbon" data-name="TEST NAME" data-label="CHARACTER NAME"></div>
+				</div>
+				<div class="infoContain"></div>
 			</div>
 		</div>
 	</div>
